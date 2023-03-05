@@ -20,7 +20,7 @@ jobs:
         laravel: [9.*]
         dependency-version: [prefer-lowest, prefer-stable]
         include:
-          - laravel: 9.x
+          - laravel: 9.*
             testbench: 6.*
 
     steps:
@@ -35,7 +35,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer require "laravel/framework:${{ matrix.laravel }}" --no-interaction --no-update
+          composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
           composer update --${{ matrix.dependency-version }} --no-interaction --no-progress
 
       - name: Execute tests
