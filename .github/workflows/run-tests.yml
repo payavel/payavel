@@ -1,0 +1,42 @@
+name: Run tests
+
+on:
+  push:
+    branches:
+      - master
+      - '*.x'
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }}
+
+    strategy:
+      fail-fast: true
+      matrix:
+        php: [7.4]
+        laravel: [9.*]
+        dependency-version: [prefer-lowest, prefer-stable]
+        include:
+          - laravel: 9.x
+            testbench: 6.*
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          tools: composer:v2
+
+      - name: Install dependencies
+        run: |
+          composer require "laravel/framework:${{ matrix.laravel }}" --no-interaction --no-update
+          composer update --${{ matrix.dependency-version }} --no-interaction --no-progress
+
+      - name: Execute tests
+        run: vendor/bin/phpunit
