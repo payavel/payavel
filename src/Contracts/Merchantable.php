@@ -1,6 +1,6 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Contracts;
+namespace Payavel\Contracts;
 
 interface Merchantable
 {

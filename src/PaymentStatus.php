@@ -1,6 +1,6 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway;
+namespace Payavel;
 
 class PaymentStatus
 {

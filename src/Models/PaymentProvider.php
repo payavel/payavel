@@ -1,11 +1,11 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Models;
+namespace Payavel\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use rkujawa\LaravelPaymentGateway\Contracts\Providable;
-use rkujawa\LaravelPaymentGateway\Database\Factories\PaymentProviderFactory;
+use Payavel\Contracts\Providable;
+use Payavel\Database\Factories\PaymentProviderFactory;
 
 class PaymentProvider extends Model implements Providable
 {

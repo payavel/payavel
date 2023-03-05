@@ -1,22 +1,22 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Models\Traits;
+namespace Payavel\Models\Traits;
 
-use rkujawa\LaravelPaymentGateway\PaymentGateway;
+use Payavel\PaymentGateway;
 
 trait ConfiguresPaymentGateway
 {
     /**
      * The payment method's pre-configured gateway.
      *
-     * @var \rkujawa\LaravelPaymentGateway\PaymentGateway
+     * @var \Payavel\PaymentGateway
      */
     private $paymentGateway;
 
     /**
      * Retrieve the payment method's configured gateway.
      *
-     * @return \rkujawa\LaravelPaymentGateway\PaymentGateway
+     * @return \Payavel\PaymentGateway
      */
     public function getGatewayAttribute()
     {

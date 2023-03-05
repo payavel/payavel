@@ -1,12 +1,12 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway;
+namespace Payavel;
 
-use rkujawa\LaravelPaymentGateway\Contracts\Merchantable;
-use rkujawa\LaravelPaymentGateway\Contracts\PaymentResponder;
-use rkujawa\LaravelPaymentGateway\Contracts\Providable;
-use rkujawa\LaravelPaymentGateway\Traits\PaymentResponses;
-use rkujawa\LaravelPaymentGateway\Traits\SimulateAttributes;
+use Payavel\Contracts\Merchantable;
+use Payavel\Contracts\PaymentResponder;
+use Payavel\Contracts\Providable;
+use Payavel\Traits\PaymentResponses;
+use Payavel\Traits\SimulateAttributes;
 use RuntimeException;
 
 abstract class PaymentResponse implements PaymentResponder
@@ -67,14 +67,14 @@ abstract class PaymentResponse implements PaymentResponder
     /**
      * The provider that the $request was made towards.
      *
-     * @var \rkujawa\LaravelPaymentGateway\Contracts\Providable
+     * @var \Payavel\Contracts\Providable
      */
     public $provider;
 
     /**
      * The merchant that was used to make the $request.
      *
-     * @var \rkujawa\LaravelPaymentGateway\Contracts\Merchantable
+     * @var \Payavel\Contracts\Merchantable
      */
     public $merchant;
 
@@ -99,8 +99,8 @@ abstract class PaymentResponse implements PaymentResponder
      * Configure the response based on the request.
      *
      * @param string $requestMethod
-     * @param \rkujawa\LaravelPaymentGateway\Contracts\Providable $provider
-     * @param \rkujawa\LaravelPaymentGateway\Contracts\Merchantable $merchant
+     * @param \Payavel\Contracts\Providable $provider
+     * @param \Payavel\Contracts\Merchantable $merchant
      * @return void
      */
     public function configure(string $requestMethod, Providable $provider, Merchantable $merchant)

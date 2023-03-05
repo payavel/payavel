@@ -1,10 +1,10 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Database\Seeders;
+namespace Payavel\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use rkujawa\LaravelPaymentGateway\Database\Factories\PaymentTypeFactory;
-use rkujawa\LaravelPaymentGateway\Models\PaymentType;
+use Payavel\Database\Factories\PaymentTypeFactory;
+use Payavel\Models\PaymentType;
 
 class PaymentTypeSeeder extends Seeder
 {

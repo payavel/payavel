@@ -1,9 +1,9 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Tests;
+namespace Payavel\Tests;
 
-use rkujawa\LaravelPaymentGateway\Models\PaymentMerchant;
-use rkujawa\LaravelPaymentGateway\Models\PaymentProvider;
+use Payavel\Models\PaymentMerchant;
+use Payavel\Models\PaymentProvider;
 
 class InstallCommandTest extends TestCase
 {    

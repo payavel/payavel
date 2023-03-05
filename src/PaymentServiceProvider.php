@@ -1,10 +1,10 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway;
+namespace Payavel;
 
 use Illuminate\Support\ServiceProvider;
-use rkujawa\LaravelPaymentGateway\Console\Commands\AddProvider;
-use rkujawa\LaravelPaymentGateway\Console\Commands\Install;
+use Payavel\Console\Commands\AddProvider;
+use Payavel\Console\Commands\Install;
 
 class PaymentServiceProvider extends ServiceProvider
 {

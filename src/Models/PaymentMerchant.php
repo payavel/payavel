@@ -1,11 +1,11 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Models;
+namespace Payavel\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use rkujawa\LaravelPaymentGateway\Contracts\Merchantable;
-use rkujawa\LaravelPaymentGateway\Database\Factories\PaymentMerchantFactory;
+use Payavel\Contracts\Merchantable;
+use Payavel\Database\Factories\PaymentMerchantFactory;
 
 class PaymentMerchant extends Model implements Merchantable
 {

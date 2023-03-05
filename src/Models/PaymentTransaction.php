@@ -1,10 +1,10 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Models;
+namespace Payavel\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use rkujawa\LaravelPaymentGateway\Database\Factories\PaymentTransactionFactory;
+use Payavel\Database\Factories\PaymentTransactionFactory;
 
 class PaymentTransaction extends Model
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Tests\Unit;
+namespace Payavel\Tests\Unit;
 
-use rkujawa\LaravelPaymentGateway\Facades\Payment;
-use rkujawa\LaravelPaymentGateway\Models\PaymentMethod;
-use rkujawa\LaravelPaymentGateway\Models\PaymentTransaction;
-use rkujawa\LaravelPaymentGateway\Models\Wallet;
-use rkujawa\LaravelPaymentGateway\PaymentResponse;
-use rkujawa\LaravelPaymentGateway\Tests\GatewayTestCase;
-use rkujawa\LaravelPaymentGateway\Tests\User;
+use Payavel\Facades\Payment;
+use Payavel\Models\PaymentMethod;
+use Payavel\Models\PaymentTransaction;
+use Payavel\Models\Wallet;
+use Payavel\PaymentResponse;
+use Payavel\Tests\GatewayTestCase;
+use Payavel\Tests\User;
 
 class TestPaymentGateway extends GatewayTestCase
 {
@@ -155,7 +155,7 @@ class TestPaymentGateway extends GatewayTestCase
      * Assert the response is configured automatically.
      *
      * @param string $requestMethod
-     * @param \rkujawa\LaravelPaymentGateway\PaymentResponse $response
+     * @param \Payavel\PaymentResponse $response
      * @return void
      */
     protected function assertResponseIsConfigured(PaymentResponse $response)

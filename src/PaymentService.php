@@ -1,9 +1,9 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway;
+namespace Payavel;
 
 use Exception;
-use rkujawa\LaravelPaymentGateway\Traits\SimulateAttributes;
+use Payavel\Traits\SimulateAttributes;
 
 class PaymentService
 {
@@ -12,28 +12,28 @@ class PaymentService
     /**
      * The payment service driver that will handle provider & merchant configurations.
      *
-     * @var \rkujawa\LaravelPaymentGateway\PaymentServiceDriver
+     * @var \Payavel\PaymentServiceDriver
      */
     private $driver;
 
     /**
      * The payment provider requests will be forwarded to.
      *
-     * @var \rkujawa\LaravelPaymentGateway\Contracts\Providable
+     * @var \Payavel\Contracts\Providable
      */
     private $provider;
 
     /**
      * The merchant that will be passed to the provider's gateway.
      *
-     * @var \rkujawa\LaravelPaymentGateway\Contracts\Merchantable
+     * @var \Payavel\Contracts\Merchantable
      */
     private $merchant;
 
     /**
      * The gateway class where requests will be executed.
      *
-     * @var \rkujawa\LaravelPaymentGateway\PaymentRequest
+     * @var \Payavel\PaymentRequest
      */
     private $gateway;
 
@@ -56,8 +56,8 @@ class PaymentService
     /**
      * Fluent provider setter.
      *
-     * @param \rkujawa\LaravelPaymentGateway\Contracts\Providable|string|int $provider
-     * @return \rkujawa\LaravelPaymentGateway\PaymentService
+     * @param \Payavel\Contracts\Providable|string|int $provider
+     * @return \Payavel\PaymentService
      */
     public function provider($provider)
     {
@@ -69,7 +69,7 @@ class PaymentService
     /**
      * Get the current payment provider.
      *
-     * @return \rkujawa\LaravelPaymentGateway\Contracts\Providable
+     * @return \Payavel\Contracts\Providable
      */
     public function getProvider()
     {
@@ -83,7 +83,7 @@ class PaymentService
     /**
      * Set the payment provider.
      *
-     * @param \rkujawa\LaravelPaymentGateway\Contracts\Providable|string|int $provider
+     * @param \Payavel\Contracts\Providable|string|int $provider
      * @return void
      *
      * @throws Exception
@@ -102,7 +102,7 @@ class PaymentService
     /**
      * Get the default payment provider.
      *
-     * @return string|int|\rkujawa\LaravelPaymentGateway\Contracts\Providable
+     * @return string|int|\Payavel\Contracts\Providable
      */
     public function getDefaultProvider()
     {
@@ -112,8 +112,8 @@ class PaymentService
     /**
      * Fluent merchant setter.
      *
-     * @param \rkujawa\LaravelPaymentGateway\Contracts\Merchantable|string|int $merchant
-     * @return \rkujawa\LaravelPaymentGateway\PaymentService
+     * @param \Payavel\Contracts\Merchantable|string|int $merchant
+     * @return \Payavel\PaymentService
      */
     public function merchant($merchant)
     {
@@ -125,7 +125,7 @@ class PaymentService
     /**
      * Get the current merchant.
      *
-     * @return \rkujawa\LaravelPaymentGateway\Contracts\Merchantable
+     * @return \Payavel\Contracts\Merchantable
      */
     public function getMerchant()
     {
@@ -139,7 +139,7 @@ class PaymentService
     /**
      * Set the specified merchant.
      *
-     * @param \rkujawa\LaravelPaymentGateway\Contracts\Merchantable|string|int $merchant
+     * @param \Payavel\Contracts\Merchantable|string|int $merchant
      * @return void
      *
      * @throws Exception
@@ -158,7 +158,7 @@ class PaymentService
     /**
      * Get the default merchant.
      *
-     * @return string|int|\rkujawa\LaravelPaymentGateway\Contracts\Merchantable
+     * @return string|int|\Payavel\Contracts\Merchantable
      */
     public function getDefaultMerchant()
     {
@@ -168,7 +168,7 @@ class PaymentService
     /**
      * Get the payment gateway service.
      *
-     * @return \rkujawa\LaravelPaymentGateway\PaymentRequest
+     * @return \Payavel\PaymentRequest
      */
     protected function getGateway()
     {

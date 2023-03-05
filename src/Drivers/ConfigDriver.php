@@ -1,11 +1,11 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Drivers;
+namespace Payavel\Drivers;
 
-use rkujawa\LaravelPaymentGateway\Contracts\Merchantable;
-use rkujawa\LaravelPaymentGateway\DataTransferObjects\Merchant;
-use rkujawa\LaravelPaymentGateway\DataTransferObjects\Provider;
-use rkujawa\LaravelPaymentGateway\PaymentServiceDriver;
+use Payavel\Contracts\Merchantable;
+use Payavel\DataTransferObjects\Merchant;
+use Payavel\DataTransferObjects\Provider;
+use Payavel\PaymentServiceDriver;
 
 class ConfigDriver extends PaymentServiceDriver
 {
@@ -36,8 +36,8 @@ class ConfigDriver extends PaymentServiceDriver
     /**
      * Resolve the providable instance.
      *
-     * @param \rkujawa\LaravelPaymentGateway\Contracts\Providable|string $provider
-     * @return \rkujawa\LaravelPaymentGateway\Contracts\Providable|null
+     * @param \Payavel\Contracts\Providable|string $provider
+     * @return \Payavel\Contracts\Providable|null
      */
     public function resolveProvider($provider)
     {
@@ -55,7 +55,7 @@ class ConfigDriver extends PaymentServiceDriver
     /**
      * Get the default providable identifier.
      *
-     * @param \rkujawa\LaravelPaymentGateway\Contracts\Merchantable|null $merchant
+     * @param \Payavel\Contracts\Merchantable|null $merchant
      * @return string|int
      */
     public function getDefaultProvider(Merchantable $merchant = null)
@@ -73,8 +73,8 @@ class ConfigDriver extends PaymentServiceDriver
     /**
      * Resolve the merchantable intance.
      *
-     * @param \rkujawa\LaravelPaymentGateway\Contracts\Merchantable|string $merchant
-     * @return \rkujawa\LaravelPaymentGateway\Contracts\Merchantable|null
+     * @param \Payavel\Contracts\Merchantable|string $merchant
+     * @return \Payavel\Contracts\Merchantable|null
      */
     public function resolveMerchant($merchant)
     {
@@ -92,8 +92,8 @@ class ConfigDriver extends PaymentServiceDriver
     /**
      * Verify that the merchant is compatible with the provider.
      *
-     * @param \rkujawa\LaravelPaymentGateway\Contracts\Providable
-     * @param \rkujawa\LaravelPaymentGateway\Contracts\Merchantable
+     * @param \Payavel\Contracts\Providable
+     * @param \Payavel\Contracts\Merchantable
      * @return bool
      */
     public function check($provider, $merchant)
@@ -104,7 +104,7 @@ class ConfigDriver extends PaymentServiceDriver
     /**
      * Resolve the gateway class.
      *
-     * @param \rkujawa\LaravelPaymentGateway\Contracts\Providable $provider
+     * @param \Payavel\Contracts\Providable $provider
      * @return string
      */
     public function resolveGatewayClass($provider)

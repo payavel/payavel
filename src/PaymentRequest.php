@@ -1,11 +1,11 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway;
+namespace Payavel;
 
-use rkujawa\LaravelPaymentGateway\Contracts\Merchantable;
-use rkujawa\LaravelPaymentGateway\Contracts\PaymentRequestor;
-use rkujawa\LaravelPaymentGateway\Contracts\Providable;
-use rkujawa\LaravelPaymentGateway\Traits\PaymentRequests;
+use Payavel\Contracts\Merchantable;
+use Payavel\Contracts\PaymentRequestor;
+use Payavel\Contracts\Providable;
+use Payavel\Traits\PaymentRequests;
 
 abstract class PaymentRequest implements PaymentRequestor
 {
@@ -14,20 +14,20 @@ abstract class PaymentRequest implements PaymentRequestor
     /**
      * The payment provider.
      *
-     * @var \rkujawa\LaravelPaymentGateway\Contracts\Providable
+     * @var \Payavel\Contracts\Providable
      */
     protected $provider;
 
     /**
      * The payment merchant.
      *
-     * @var \rkujawa\LaravelPaymentGateway\Contracts\Merchantable
+     * @var \Payavel\Contracts\Merchantable
      */
     protected $merchant;
 
     /**
-     * @param  \rkujawa\LaravelPaymentGateway\Contracts\Providable $provider
-     * @param  \rkujawa\LaravelPaymentGateway\Contracts\Merchantable $merchant
+     * @param  \Payavel\Contracts\Providable $provider
+     * @param  \Payavel\Contracts\Merchantable $merchant
      */
     public function __construct(Providable $provider, Merchantable $merchant)
     {

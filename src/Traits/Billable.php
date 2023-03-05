@@ -1,8 +1,8 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Traits;
+namespace Payavel\Traits;
 
-use rkujawa\LaravelPaymentGateway\Models\Wallet;
+use Payavel\Models\Wallet;
 
 trait Billable
 {

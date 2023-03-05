@@ -21,12 +21,12 @@ return [
     |
     | You may register custom payment drivers and/or remove the default ones.
     | Please note that in order for the driver to be compatible it must extend
-    | the \rkujawa\LaravelPaymentGateway\PaymentServiceDriver::class.
+    | the \Payavel\PaymentServiceDriver::class.
     |
     */
     'drivers' => [
-        'config' => \rkujawa\LaravelPaymentGateway\Drivers\ConfigDriver::class,
-        'database' => \rkujawa\LaravelPaymentGateway\Drivers\DatabaseDriver::class,
+        'config' => \Payavel\Drivers\ConfigDriver::class,
+        'database' => \Payavel\Drivers\DatabaseDriver::class,
     ],
 
 ];
