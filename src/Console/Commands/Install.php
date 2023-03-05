@@ -1,11 +1,11 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Console\Commands;
+namespace Payavel\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use rkujawa\LaravelPaymentGateway\Traits\GeneratesFiles;
-use rkujawa\LaravelPaymentGateway\Traits\Questionable;
+use Payavel\Traits\GeneratesFiles;
+use Payavel\Traits\Questionable;
 
 class Install extends Command
 {
@@ -54,7 +54,7 @@ class Install extends Command
     public function handle()
     {
         if (! class_exists('CreateBasePaymentTables')) {
-            $this->call('vendor:publish', ['--provider' => 'rkujawa\LaravelPaymentGateway\PaymentServiceProvider', '--tag' => 'migrations']);
+            $this->call('vendor:publish', ['--provider' => 'Payavel\PaymentServiceProvider', '--tag' => 'migrations']);
         }
 
         $this->installProviders();

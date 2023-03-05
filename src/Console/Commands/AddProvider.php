@@ -1,11 +1,11 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Console\Commands;
+namespace Payavel\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use rkujawa\LaravelPaymentGateway\Traits\GeneratesFiles;
-use rkujawa\LaravelPaymentGateway\Traits\Questionable;
+use Payavel\Traits\GeneratesFiles;
+use Payavel\Traits\Questionable;
 
 class AddProvider extends Command
 {

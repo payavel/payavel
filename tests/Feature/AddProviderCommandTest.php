@@ -1,9 +1,9 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Tests;
+namespace Payavel\Tests;
 
 use Illuminate\Support\Str;
-use rkujawa\LaravelPaymentGateway\Models\PaymentProvider;
+use Payavel\Models\PaymentProvider;
 
 class AddProviderCommandTest extends TestCase
 {

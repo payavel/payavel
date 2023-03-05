@@ -1,6 +1,6 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Traits;
+namespace Payavel\Traits;
 
 use RuntimeException;
 

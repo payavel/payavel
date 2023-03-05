@@ -1,11 +1,11 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Database\Factories;
+namespace Payavel\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use rkujawa\LaravelPaymentGateway\Models\PaymentTransaction;
-use rkujawa\LaravelPaymentGateway\Models\PaymentTransactionEvent;
-use rkujawa\LaravelPaymentGateway\PaymentStatus;
+use Payavel\Models\PaymentTransaction;
+use Payavel\Models\PaymentTransactionEvent;
+use Payavel\PaymentStatus;
 
 class PaymentTransactionEventFactory extends Factory
 {

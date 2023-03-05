@@ -1,10 +1,10 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Tests;
+namespace Payavel\Tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use rkujawa\LaravelPaymentGateway\PaymentServiceProvider;
+use Payavel\PaymentServiceProvider;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -34,7 +34,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     protected function afterRefreshingDatabase()
     {
         if (! class_exists('CreateBasePaymentTables')) {
-            $this->artisan('vendor:publish', ['--provider' => 'rkujawa\LaravelPaymentGateway\PaymentServiceProvider', '--tag' => 'migrations']);
+            $this->artisan('vendor:publish', ['--provider' => 'Payavel\PaymentServiceProvider', '--tag' => 'migrations']);
 
             $this->artisan('migrate');
         }

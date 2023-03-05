@@ -1,9 +1,9 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\DataTransferObjects;
+namespace Payavel\DataTransferObjects;
 
-use rkujawa\LaravelPaymentGateway\Contracts\Providable;
-use rkujawa\LaravelPaymentGateway\Traits\SimulateAttributes;
+use Payavel\Contracts\Providable;
+use Payavel\Traits\SimulateAttributes;
 
 class Provider implements Providable
 {

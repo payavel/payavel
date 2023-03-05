@@ -1,10 +1,10 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\DataTransferObjects;
+namespace Payavel\DataTransferObjects;
 
 use Illuminate\Support\Collection;
-use rkujawa\LaravelPaymentGateway\Contracts\Merchantable;
-use rkujawa\LaravelPaymentGateway\Traits\SimulateAttributes;
+use Payavel\Contracts\Merchantable;
+use Payavel\Traits\SimulateAttributes;
 
 class Merchant implements Merchantable
 {

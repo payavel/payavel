@@ -1,22 +1,22 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Tests;
+namespace Payavel\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
-use rkujawa\LaravelPaymentGateway\Contracts\Billable;
-use rkujawa\LaravelPaymentGateway\Models\PaymentMerchant;
-use rkujawa\LaravelPaymentGateway\Models\PaymentMethod;
-use rkujawa\LaravelPaymentGateway\Models\PaymentProvider;
-use rkujawa\LaravelPaymentGateway\Models\PaymentTransaction;
-use rkujawa\LaravelPaymentGateway\Models\Wallet;
-use rkujawa\LaravelPaymentGateway\PaymentRequest;
-use rkujawa\LaravelPaymentGateway\PaymentResponse;
-use rkujawa\LaravelPaymentGateway\PaymentStatus;
-use rkujawa\LaravelPaymentGateway\Traits\Billable as BillableTrait;
+use Payavel\Contracts\Billable;
+use Payavel\Models\PaymentMerchant;
+use Payavel\Models\PaymentMethod;
+use Payavel\Models\PaymentProvider;
+use Payavel\Models\PaymentTransaction;
+use Payavel\Models\Wallet;
+use Payavel\PaymentRequest;
+use Payavel\PaymentResponse;
+use Payavel\PaymentStatus;
+use Payavel\Traits\Billable as BillableTrait;
 
 abstract class GatewayTestCase extends TestCase
 {

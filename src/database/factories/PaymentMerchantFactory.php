@@ -1,10 +1,10 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Database\Factories;
+namespace Payavel\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use rkujawa\LaravelPaymentGateway\Models\PaymentMerchant;
+use Payavel\Models\PaymentMerchant;
 
 class PaymentMerchantFactory extends Factory
 {

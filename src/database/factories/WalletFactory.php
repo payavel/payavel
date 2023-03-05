@@ -1,11 +1,11 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Database\Factories;
+namespace Payavel\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use rkujawa\LaravelPaymentGateway\Models\PaymentMerchant;
-use rkujawa\LaravelPaymentGateway\Models\PaymentProvider;
-use rkujawa\LaravelPaymentGateway\Models\Wallet;
+use Payavel\Models\PaymentMerchant;
+use Payavel\Models\PaymentProvider;
+use Payavel\Models\Wallet;
 
 class WalletFactory extends Factory
 {

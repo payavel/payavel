@@ -1,6 +1,6 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Tests\Unit;
+namespace Payavel\Tests\Unit;
 
 class ConfigDriverTest extends TestPaymentGateway
 {

@@ -2,7 +2,7 @@
 
 namespace App\Services\Payment;
 
-use rkujawa\LaravelPaymentGateway\PaymentResponse;
+use Payavel\PaymentResponse;
 
 class {{ name }}PaymentResponse extends PaymentResponse
 {

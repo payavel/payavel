@@ -69,8 +69,8 @@ return [
     |
     */
     // 'models' => [
-    //     \rkujawa\LaravelPaymentGateway\Models\PaymentMethod::class => \App\Models\Payment\PaymentMethod::class,
-    //     \rkujawa\LaravelPaymentGateway\Models\Wallet::class => \App\Models\Payment\Wallet::class,
+    //     \Payavel\Models\PaymentMethod::class => \App\Models\Payment\PaymentMethod::class,
+    //     \Payavel\Models\Wallet::class => \App\Models\Payment\Wallet::class,
     // ],
 
 ];

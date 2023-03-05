@@ -1,11 +1,11 @@
 <?php
 
-namespace rkujawa\LaravelPaymentGateway\Models;
+namespace Payavel\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use rkujawa\LaravelPaymentGateway\Database\Factories\PaymentMethodFactory;
-use rkujawa\LaravelPaymentGateway\Models\Traits\PaymentMethodRequests;
+use Payavel\Database\Factories\PaymentMethodFactory;
+use Payavel\Models\Traits\PaymentMethodRequests;
 
 class PaymentMethod extends Model
 {
@@ -51,7 +51,7 @@ class PaymentMethod extends Model
     /**
      * Get the payment method's provider.
      *
-     * @return \rkujawa\LaravelPaymentGateway\Models\PaymentProvider
+     * @return \Payavel\Models\PaymentProvider
      */
     public function getProviderAttribute()
     {
@@ -61,7 +61,7 @@ class PaymentMethod extends Model
     /**
      * Get the payment method's merchant.
      *
-     * @return \rkujawa\LaravelPaymentGateway\Models\PaymentMerchant
+     * @return \Payavel\Models\PaymentMerchant
      */
     public function getMerchantAttribute()
     {
