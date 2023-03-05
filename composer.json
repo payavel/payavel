@@ -1,15 +1,11 @@
 {
-    "name": "r-kujawa/laravel-payment-gateway",
-    "description": "A robust gateway that integrates with any payment procesor and Laravel.",
+    "name": "payavel/payavel",
+    "description": "A robust gateway that integrates with any payment processor and Laravel.",
     "license": "MIT",
     "authors": [
         {
             "name": "Robert Kujawa",
-            "email": "bobkujawa@gmail.com"
-        },
-        {
-            "name": "Mario Avila",
-            "email": "maar01art@gmail.com"
+            "email": "robert.kujawa@proton.me"
         }
     ],
     "require-dev": {
@@ -17,21 +13,21 @@
     },
     "autoload": {
         "psr-4": {
-            "rkujawa\\LaravelPaymentGateway\\": "src/",
-            "rkujawa\\LaravelPaymentGateway\\Database\\Factories\\": "src/database/factories/",
-            "rkujawa\\LaravelPaymentGateway\\Database\\Seeders\\": "src/database/seeders/"
+            "Payavel\\": "src/",
+            "Payavel\\Database\\Factories\\": "src/database/factories/",
+            "Payavel\\Database\\Seeders\\": "src/database/seeders/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "rkujawa\\LaravelPaymentGateway\\Tests\\": "tests/",
-            "rkujawa\\LaravelPaymentGateway\\Tests\\App\\": "tests/app/"
+            "Payavel\\Tests\\": "tests/",
+            "Payavel\\Tests\\App\\": "tests/app/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "rkujawa\\LaravelPaymentGateway\\PaymentServiceProvider"
+                "Payavel\\PaymentServiceProvider"
             ]
         }
     }
