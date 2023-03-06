@@ -1,27 +1,19 @@
-# Getting Started
-## Installation
-Install the package via Composer:
-```
-composer require r-kujawa/laravel-payment-gateway
-```
-Then, publish the config:
-```
-php artisan vendor:publish --tag=payment-config
-```
-Optionaly, you may also publish the migration file:
-```
-php artisan vendor:publish --tag=payment-migration
-```
+# Payavel
+[![Packagist Version](https://img.shields.io/packagist/v/payavel/payavel)](https://packagist.org/packages/payavel/payavel)
+[![Total Downloads](https://img.shields.io/packagist/dt/payavel/payavel)](https://packagist.org/packages/payavel/payavel)
+[![License](https://img.shields.io/packagist/l/payavel/payavel)](https://packagist.org/packages/payavel/payavel)
+[![Tests](https://github.com/payavel/payavel/actions/workflows/run-tests.yml/badge.svg)](https://github.com/payavel/payavel/actions/workflows/run-tests.yml)
 
-## Configuring your environment
-### Payment Method Types
-To provide support for payment method types you can run `php artisan payment:add-type 'Your Type'`. This will generate a migration to add the payment type.
+Payavel is a package that integrates seamlessly within the Laravel ecosystem that simplifies the way you integrate & process payments via your preferred payment service provider.
 
-### Payment Providers
-You must also add at least one payment provider using `php artisan payment:add-provider` and follow the instructions. This will scaffold the boilerplate code that will help you with your implementation and will also generate a migration to add the provider.
+---
+Payavel is the re-branded version of the legacy [r-kujawa/laravel-payment-gateway](https://github.com/r-kujawa/laravel-payment-gateway) package.
+Please reference the [Payavel documentation](https://payavel.com) to get started.
+## Contributing
+All contributions are welcome! If you are not sure how to contribute, please feel free to [start a discussion](https://github.com/payavel/payavel/discussions) to suggest an idea or ask any relevant questions regarding this package.
 
-### Payment Merchants
-You must specify one or more merchants depending on your application's needs, to do this you may run `php artisan payment:add-merchant` and follow the instructions. This will generate a migration to add the merchant and relate it to the payment providers it will support.
+## License
 
-## The payment config
-You must specify the default provider and merchant you will be processing payments with in the `'defaults'` array of the `payment.php` config file.
+Copyright © Robert Kujawa
+
+Payavel is open-sourced software licensed under the [MIT license](LICENSE.md).
