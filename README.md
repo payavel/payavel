@@ -8,6 +8,7 @@ Payavel is a package that integrates seamlessly within the Laravel ecosystem tha
 
 ---
 Payavel is the re-branded version of the legacy [r-kujawa/laravel-payment-gateway](https://github.com/r-kujawa/laravel-payment-gateway) package.
+
 Please reference the [Payavel documentation](https://payavel.com) to get started.
 ## Contributing
 All contributions are welcome! If you are not sure how to contribute, please feel free to [start a discussion](https://github.com/payavel/payavel/discussions) to suggest an idea or ask any relevant questions regarding this package.
