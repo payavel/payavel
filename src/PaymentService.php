@@ -196,7 +196,7 @@ class PaymentService
         }
 
         $gateway = config('payment.test_mode', false)
-            ? config('payment.test.gateway', '\\App\\Services\\Payment\\FakePaymentGateway')
+            ? config('payment.test.gateway', '\\App\\Services\\Payment\\FakePaymentRequest')
             : $this->driver->resolveGatewayClass($provider);
 
         if (! class_exists($gateway)) {
