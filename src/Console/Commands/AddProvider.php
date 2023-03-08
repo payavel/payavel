@@ -77,8 +77,8 @@ class AddProvider extends Command
         $provider = Str::studly($this->id);
 
         $this->putFile(
-            app_path("Services/Payment/{$provider}PaymentGateway.php"),
-            $this->makeFile(__DIR__ . '/../stubs/payment-gateway.stub', ['name' => $provider])
+            app_path("Services/Payment/{$provider}PaymentRequest.php"),
+            $this->makeFile(__DIR__ . '/../stubs/payment-request.stub', ['name' => $provider])
         );
 
         $this->putFile(

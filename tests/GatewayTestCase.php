@@ -60,7 +60,7 @@ abstract class GatewayTestCase extends TestCase
             'payment.providers' => [
                 $this->provider => [
                     'name' => Str::headline($this->provider),
-                    'request_class' => FakePaymentGateway::class,
+                    'request_class' => FakePaymentRequest::class,
                     'response_class' => FakePaymentResponse::class,
                 ],
             ],
@@ -82,7 +82,7 @@ abstract class GatewayTestCase extends TestCase
         $provider = PaymentProvider::create([
             'id' => 'test',
             'name' => 'Test',
-            'request_class' => FakePaymentGateway::class,
+            'request_class' => FakePaymentRequest::class,
             'response_class' => FakePaymentResponse::class,
         ]);
 
@@ -95,7 +95,7 @@ abstract class GatewayTestCase extends TestCase
     }
 }
 
-class FakePaymentGateway extends PaymentRequest
+class FakePaymentRequest extends PaymentRequest
 {
     public function getWallet(Wallet $wallet)
     {

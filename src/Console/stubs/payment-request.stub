@@ -8,7 +8,7 @@ use Payavel\Models\PaymentTransaction;
 use Payavel\Models\Wallet;
 use Payavel\PaymentRequest;
 
-class {{ name }}PaymentGateway extends PaymentRequest
+class {{ name }}PaymentRequest extends PaymentRequest
 {
     /**
      * Set up the request.
