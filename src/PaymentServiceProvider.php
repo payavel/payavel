@@ -3,8 +3,8 @@
 namespace Payavel;
 
 use Illuminate\Support\ServiceProvider;
-use Payavel\Console\Commands\AddProvider;
 use Payavel\Console\Commands\Install;
+use Payavel\Console\Commands\MakeProvider;
 
 class PaymentServiceProvider extends ServiceProvider
 {
@@ -13,7 +13,7 @@ class PaymentServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->vendorPublish();
             $this->commands([
-                AddProvider::class,
+                MakeProvider::class,
                 Install::class,
             ]);
         }

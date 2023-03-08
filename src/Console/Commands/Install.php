@@ -84,7 +84,7 @@ class Install extends Command
      */
     protected function installProviders()
     {
-        $this->call('payment:add-provider', ['--fake' => true]);
+        $this->call('payavel:provider', ['--fake' => true]);
 
         $this->providers = collect([]);
 
@@ -95,7 +95,7 @@ class Install extends Command
                 'provider' => Str::studly($id),
             ]);
 
-            $this->call('payment:add-provider', ['provider' => $name, '--id' => $id]);
+            $this->call('payavel:provider', ['provider' => $name, '--id' => $id]);
         } while ($this->confirm('Would you like to add another payment provider?', false));
 
         $this->config['providers'] = $this->providers->reduce(function ($config, $provider) {

@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 use Payavel\Traits\GeneratesFiles;
 use Payavel\Traits\Questionable;
 
-class AddProvider extends Command
+class MakeProvider extends Command
 {
     use Questionable, GeneratesFiles;
 
@@ -16,7 +16,7 @@ class AddProvider extends Command
      *
      * @var string
      */
-    protected $signature = 'payment:add-provider
+    protected $signature = 'payavel:provider
                             {provider? : The payment provider name}
                             {--id= : The payment provider identifier}
                             {--fake : Generates a gateway to be used for testing purposes}';
