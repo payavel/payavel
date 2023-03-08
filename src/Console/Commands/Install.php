@@ -64,7 +64,7 @@ class Install extends Command
         $this->putFile(
             config_path('payment.php'),
             $this->makeFile(
-                __DIR__ . '/../../stubs/config/payment.stub',
+                __DIR__ . '/../../stubs/config-payment.stub',
                 [
                     'provider' => $this->config['defaults']['provider'],
                     'providers' => $this->config['providers'],
@@ -99,7 +99,7 @@ class Install extends Command
         } while ($this->confirm('Would you like to add another payment provider?', false));
 
         $this->config['providers'] = $this->providers->reduce(function ($config, $provider) {
-            return $config . $this->makeFile(__DIR__ . '/../../stubs/config/provider.stub', $provider);
+            return $config . $this->makeFile(__DIR__ . '/../../stubs/config-provider.stub', $provider);
         }, "");
 
         $this->config['defaults']['provider'] = $this->providers->count() > 1
@@ -133,14 +133,14 @@ class Install extends Command
                 : [$this->providers->first()['id']];
 
             $merchant['providers'] = collect($providers)->reduce(function ($config, $provider, $index) use ($providers) {
-                return $config . $this->makeFile(__DIR__ . '/../../stubs/config/merchant-providers.stub', ['id' => $provider]) . ($index < count($providers) - 1 ? "\n" : "");
+                return $config . $this->makeFile(__DIR__ . '/../../stubs/config-merchant-providers.stub', ['id' => $provider]) . ($index < count($providers) - 1 ? "\n" : "");
             }, "");
 
             $this->merchants->push($merchant);
         } while ($this->confirm('Would you like to add another payment merchant?', false));
 
         $this->config['merchants'] = $this->merchants->reduce(function ($config, $merchant) {
-            return $config . $this->makeFile(__DIR__ . '/../../stubs/config/merchant.stub', $merchant);
+            return $config . $this->makeFile(__DIR__ . '/../../stubs/config-merchant.stub', $merchant);
         }, "");
 
         $this->config['defaults']['merchant'] = $this->merchants->count() > 1
