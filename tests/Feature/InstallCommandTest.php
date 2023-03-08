@@ -13,7 +13,7 @@ class InstallCommandTest extends TestCase
         $provider = PaymentProvider::factory()->make();
         $merchant = PaymentMerchant::factory()->make();
 
-        $this->artisan('payment:install')
+        $this->artisan('payavel:install')
             ->expectsOutput('Fake payment gateway generated successfully!')
             ->expectsQuestion('What payment provider would you like to add?', $provider->name)
             ->expectsQuestion('How would you like to identify the ' . $provider->name . ' payment provider?', $provider->id)
@@ -46,7 +46,7 @@ class InstallCommandTest extends TestCase
         $merchant2 = PaymentMerchant::factory()->make();
         $merchant3 = PaymentMerchant::factory()->make();
 
-        $this->artisan('payment:install')
+        $this->artisan('payavel:install')
             ->expectsOutput('Fake payment gateway generated successfully!')
             ->expectsQuestion('What payment provider would you like to add?', $provider1->name)
             ->expectsQuestion('How would you like to identify the ' . $provider1->name . ' payment provider?', $provider1->id)
