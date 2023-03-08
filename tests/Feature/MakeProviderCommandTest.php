@@ -5,14 +5,14 @@ namespace Payavel\Tests;
 use Illuminate\Support\Str;
 use Payavel\Models\PaymentProvider;
 
-class AddProviderCommandTest extends TestCase
+class MakeProviderCommandTest extends TestCase
 {
     /** @test */
-    public function add_payment_provider_command_will_prompt_for_missing_arguments()
+    public function make_payment_provider_command_will_prompt_for_missing_arguments()
     {
         $provider = PaymentProvider::factory()->make();
 
-        $this->artisan('payment:add-provider')
+        $this->artisan('payavel:provider')
             ->expectsQuestion('What payment provider would you like to add?', $provider->name)
             ->expectsQuestion("How would you like to identify the {$provider->name} payment provider?", $provider->id)
             ->expectsOutput("{$provider->name} payment gateway generated successfully!")
@@ -22,11 +22,11 @@ class AddProviderCommandTest extends TestCase
     }
 
     /** @test */
-    public function add_payment_provider_command_completes_without_asking_questions_when_providing_the_arguments()
+    public function make_payment_provider_command_completes_without_asking_questions_when_providing_the_arguments()
     {
         $provider = PaymentProvider::factory()->make();
 
-        $this->artisan('payment:add-provider', [
+        $this->artisan('payavel:provider', [
                 'provider' => $provider->name,
                 '--id' => $provider->id,
             ])
@@ -37,13 +37,13 @@ class AddProviderCommandTest extends TestCase
     }
 
     /** @test */
-    public function add_payment_provider_command_with_fake_argument_generates_fake_gateway()
+    public function make_payment_provider_command_with_fake_argument_generates_fake_gateway()
     {
         $arguments = [
             '--fake' => true,
         ];
 
-        $this->artisan('payment:add-provider', $arguments)
+        $this->artisan('payavel:provider', $arguments)
             ->expectsOutput('Fake payment gateway generated successfully!')
             ->assertExitCode(0);
 
