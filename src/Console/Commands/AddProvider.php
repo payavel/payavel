@@ -78,12 +78,12 @@ class AddProvider extends Command
 
         $this->putFile(
             app_path("Services/Payment/{$provider}PaymentRequest.php"),
-            $this->makeFile(__DIR__ . '/../stubs/payment-request.stub', ['name' => $provider])
+            $this->makeFile(__DIR__ . '/../../stubs/payment-request.stub', ['name' => $provider])
         );
 
         $this->putFile(
             app_path("Services/Payment/{$provider}PaymentResponse.php"),
-            $this->makeFile(__DIR__ . '/../stubs/payment-response.stub', ['name' => $provider])
+            $this->makeFile(__DIR__ . '/../../stubs/payment-response.stub', ['name' => $provider])
         );
 
         $this->info("{$this->name} payment gateway generated successfully!");
