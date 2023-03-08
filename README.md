@@ -1,9 +1,13 @@
-# Payavel
-[![Packagist Version](https://img.shields.io/packagist/v/payavel/payavel)](https://packagist.org/packages/payavel/payavel)
-[![Total Downloads](https://img.shields.io/packagist/dt/payavel/payavel)](https://packagist.org/packages/payavel/payavel)
-[![License](https://img.shields.io/packagist/l/payavel/payavel)](https://packagist.org/packages/payavel/payavel)
-[![Tests](https://github.com/payavel/payavel/actions/workflows/run-tests.yml/badge.svg)](https://github.com/payavel/payavel/actions/workflows/run-tests.yml)
+<p align="center"><a href="https://payavel.com" target="_blank"><img src="https://user-images.githubusercontent.com/13485445/223704901-8c2754c6-0890-486f-ab4a-6bf551119374.svg" width="400"></a></p>
 
+<p align="center">
+<a href="https://packagist.org/packages/payavel/payavel"><img src="https://img.shields.io/packagist/v/payavel/payavel" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/payavel/payavel"><img src="https://img.shields.io/packagist/dt/payavel/payavel" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/payavel/payavel"><img src="https://img.shields.io/packagist/l/payavel/payavel" alt="License"></a>
+<a href="https://github.com/payavel/payavel/actions/workflows/run-tests.yml"><img src="https://github.com/payavel/payavel/actions/workflows/run-tests.yml/badge.svg" alt="Build Status"></a>
+</p>
+
+## About Payavel
 Payavel is a package that integrates seamlessly within the Laravel ecosystem that simplifies the way you integrate & process payments via your preferred payment service provider.
 
 ---
